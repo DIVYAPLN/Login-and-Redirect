@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            background-color: burlywood;
+        }
+        .login{
+        background-color: rgb(24, 100, 105);
+        padding: 40px;
+        width: 200px;
+        height: 200px;
+        margin-top: 200px;
+        margin-left: 600px;
+        color: white;
+        border-radius: 20px; 
+        box-shadow: 8px 10px 6px black;  
+        }
+        button{
+            padding: 10px;
+            width: 100px;
+            margin-left: 50px;
+            border-radius: 5px;
+        }
+        #Name{
+            padding: 10px;
+            margin-left: 10px;
+            border: none;
+            margin-top: 15px;
+        }
+        #Password{
+            padding: 10px;
+            margin-left: 10px;
+            border: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="login">
+      
+      <input type="text" id="Name" placeholder="Username"><br><br>
+
+      
+      <input type="password" id ="Password" placeholder="password"><br><br>
+
+      <button onclick="myfunction()">Login</button>
+    </div>
+
+    
+    
+<script>
+    function myfunction() {
+    var Name=document.getElementById("Name").value;
+    var Password=document.getElementById("Password").value;
+
+    if(Name=="Sid" && Password=="123"){
+        alert("login Successfully")
+        document.getElementById("Name").style.border="3px solid green"
+        document.getElementById("Password").style.border="3px solid green"
+        window.location.href=("Redirect.html")
+    }
+    else{
+        alert("failed")
+        document.getElementById("Name").style.border="3px solid red"
+        document.getElementById("Password").style.border="3px solid red"}
+       
+    }
+</script>
+    
+</body>
+</html>
